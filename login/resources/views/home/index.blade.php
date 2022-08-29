@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel login</title>
-        <!-- Styles -->
-
-        <style>
-            body {
-                font-family: sans-serif;
-            }
-        </style>
-    </head>
-    <body>
+@extends('layoust.app-master')
+@section('content')
 	    @auth
 		<nav><ul><li><a href="/logout">Logout</a></li></ul></nav>
 		@endauth
@@ -25,5 +11,4 @@
 		<p>Bienvenido, para ver el contenido debes autenticarte <a href="/login">Login</a> </p>
 		<p>Si aún no tienes una cuenta aquí la puedes crear <a href="/Register">Register</a> </p>
 		@endguest
-	</body>
-</html>
+@endsection
