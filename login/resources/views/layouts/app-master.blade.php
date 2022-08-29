@@ -8,9 +8,10 @@
 	<link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}">
 </head>
 <body>
+	@include('layouts.blocks.navbar')
 	<main class="container">
-		@yield('content');
+		@yield('content')
 	</main>
-	<script src="{{ url('assets/js/bootstrap.min.js')}}">
+	<script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>
