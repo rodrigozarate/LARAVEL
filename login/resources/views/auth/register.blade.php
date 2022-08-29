@@ -40,7 +40,8 @@
             <label for="password_confirmation">Password confirmation</label>
 			<input type="password" name="password_confirmation">
             </div>
-			<input type="submit" value="Registrarme">
+			<input type="submit" value="Register">
 		</form>
+        <p>Already have an account? <a href="/login">Login here</a></p>
 	</body>
 </html>

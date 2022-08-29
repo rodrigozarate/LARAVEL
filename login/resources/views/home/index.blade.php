@@ -14,7 +14,9 @@
         </style>
     </head>
     <body>
+	    @auth
 		<nav><ul><li><a href="/logout">Logout</a></li></ul></nav>
+		@endauth
 		<h1>Home is where the heart is.</h1>
 		@auth
 		<p>Bienvenido {{auth()->user()->name ?? auth()->user()->user_name}}</p>
