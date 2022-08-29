@@ -29,5 +29,6 @@
 
 			<input type="submit" value="Login">
 		</form>
+		<p>Don't have an account yet? <a href="/register">Register here</a></p>
 	</body>
 </html>
