@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel login</title>
-        <!-- Styles -->
-
-        <style>
-            body {
-                font-family: sans-serif;
-            }
-        </style>
-    </head>
-    <body>
+@extends('layouts.auth-master')
+@section('content')
 		<form action="/register" method="POST">
 			@csrf
-            <div>
-            <label for="name">Name</label>
-			<input type="text" name="name">
+            <div class="form-floating">
+                <input type="text" name="name" id="name" class="form-control" placeholder="name">
+                <label for="name">Name</label>
             </div>
-            <div>
-            <label for="user_name">User name</label>
-			<input type="text" name="user_name">
+            <div class="form-floating">
+                
+                <input type="text" name="user_name" id="user_name" class="form-control" placeholder="User name">
+                <label for="user_name">User name</label>
             </div>
-            <div>
-            <label for="user_id">ID</label>
-			<input type="number" name="user_id">
+            <div class="form-floating">
+                
+                <input type="number" name="user_id" id="user_id" class="form-control" placeholder="ID">
+                <label for="user_id">ID</label>
             </div>
-            <div>
-            <label for="email">email</label>
-			<input type="email" name="email">
+            <div class="form-floating">
+                
+                <input type="email" name="email" id="email" class="form-control" placeholder="email">
+                <label for="email">email</label>
             </div>
-            <div>
-            <label for="password">Password</label>
-			<input type="password" name="password">
+            <div class="form-floating">
+                
+                <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                <label for="password">Password</label>
             </div>
-            <div>
-            <label for="password_confirmation">Password confirmation</label>
-			<input type="password" name="password_confirmation">
+            <div class="form-floating">
+                
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="Password confirmation">
+                <label for="password_confirmation">Password confirmation</label>
             </div>
-			<input type="submit" value="Register">
+			<button type="submit" class="btn btn-primary">Register</button>
 		</form>
         <p>Already have an account? <a href="/login">Login here</a></p>
-	</body>
-</html>
+@endsection
